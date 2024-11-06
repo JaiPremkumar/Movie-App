@@ -22,7 +22,7 @@ export default function Header(){
   useEffect(()=>{
       fetchApp() 
   },[])
-      const API_KEY = 'http://www.omdbapi.com/?apikey=b6598dc0'
+      const API_KEY = 'https://www.omdbapi.com/?apikey=b6598dc0'
   const fetchApp=async(title)=>{
       const res = await fetch( `${API_KEY}&s=${title}`)
       const Db= await res.json()
@@ -30,7 +30,7 @@ export default function Header(){
       if(Db.Search){
         setData(Db.Search)
       }else{
-        setData([])
+        setData([]) 
       }
   }
        
